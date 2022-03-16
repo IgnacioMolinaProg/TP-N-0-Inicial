@@ -10,6 +10,8 @@ void ejercicio_2_condicionalSelectivoSimple();
 void ejercicio_3_condicionalSelectivoSimple();
 void ejercicio_4_condicionalSelectivoSimple();
 void ejercicio_5_condicionalSelectivoSimple();
+///Problemas Condicionales Selectivos Compuestos
+void ejercicio_1_condicionalSelectivoCompuesto();
 int main()
 {
     ///PROBLEMAS SECUENCIALES
@@ -21,7 +23,9 @@ int main()
     //ejercicio_2_condicionalSelectivoSimple();
     //ejercicio_3_condicionalSelectivoSimple();
     //ejercicio_4_condicionalSelectivoSimple();
-    ejercicio_5_condicionalSelectivoSimple();
+    //ejercicio_5_condicionalSelectivoSimple();
+    ///Problemas Condicionales Selectivos Compuestos
+    ejercicio_1_condicionalSelectivoCompuesto();
 
     return 0;
 }
@@ -32,7 +36,7 @@ void ejercicio_1_secuencial()
     float dinero,ganancia;
    printf("Ingrese el monto de su cuenta bancaria: ");
    scanf("%f",&dinero);
-   ganancia=dinero+(dinero*0.02);
+   ganancia=dinero+(dinero*0.02);//le sumo el 20% de ganancia
    printf("\nDespues de un mes su monto sera de: %.2f",ganancia);
 }
 void ejercicio_2_secuencial()
@@ -40,9 +44,9 @@ void ejercicio_2_secuencial()
     //2. Una tienda ofrece un descuento del 15% sobre el total de la compra y un cliente desea saber cuánto deberá pagar finalmente por su compra.
     float dinero,precioFinal;
     printf("Ingrese el monto a pagar: ");
-   scanf("%f",&dinero);
-   precioFinal=dinero-(dinero*0.15);
-   printf("\nLa compra con el 15%% de descuenta sera de: %.2f",precioFinal);
+    scanf("%f",&dinero);
+    precioFinal=dinero-(dinero*0.15);//le resto el descuento del 15%
+    printf("\nLa compra con el 15%% de descuenta sera de: %.2f",precioFinal);
 
 }
 void ejercicio_3_secuencial()
@@ -55,8 +59,8 @@ void ejercicio_3_secuencial()
     printf("Ingrese la cantidad de alumnos Mujeres: ");
     scanf("%i",&mujeres);
     totalPersonas=mujeres+hombres;
-    porcentajeHombre=(((float)hombres/(float)totalPersonas)*100);
-    porcentajeMujeres=(((float)mujeres/(float)totalPersonas)*100);
+    porcentajeHombre=(((float)hombres/(float)totalPersonas)*100);//saco la cantidad de porcentaje de hombre sobre el total
+    porcentajeMujeres=(((float)mujeres/(float)totalPersonas)*100);//saco la cantidad de porcentaje de mujeres sobre el total
     printf("El porcentaje de Hombres es de: %.2f%%",porcentajeHombre);
     printf("\nEl porcentaje de Mujeres es de: %.2f%%",porcentajeMujeres);
 }
@@ -92,12 +96,9 @@ void ejercicio_2_condicionalSelectivoSimple()
     scanf("%f",&montoDeCompra);
 
     montoConDescuento=montoDeCompra;
-    if(montoDeCompra>limiteDescuento)
-        montoConDescuento-=montoConDescuento*descuento;
-
-    printf("El monto a pagar sera de:$%.2f",montoConDescuento);
-    if(montoDeCompra>limiteDescuento)
-        printf(", con un descuento del 20%%.");
+    if(montoDeCompra>limiteDescuento)//si el monto de la compra es mayor a la cantidad minima para el descuento
+        montoConDescuento-=montoConDescuento*descuento;//se aplica el descuento
+    printf("El monto a pagar sera de:$%.2f con un descuento del %.2f%%",montoConDescuento,descuento*100);
 }
 void ejercicio_3_condicionalSelectivoSimple()
 {
@@ -150,16 +151,41 @@ void ejercicio_5_condicionalSelectivoSimple()
     printf("Ingrese el precio unitario de las camisas: $");
     scanf("%f",&precioCamisa);
     precioFinalVenta=cantidadCamisasCompradas*precioCamisa;
-    if(cantidadCamisasCompradas>=minimoDeCamisasXmayorista)
+    if(cantidadCamisasCompradas>=minimoDeCamisasXmayorista)//si la cantidad de camisas es mayor o igual a la cantidad minima del descuento para moyoristas
     {
         precioFinalVenta-=precioFinalVenta*descuentoMayorista;
         printf("\nEl precio Final de venta es de: $%.2f con el %.2f%% de descuento",precioFinalVenta,descuentoMayorista*100);
     }
-    else
+    else//si la cantidad de camisas es menor a la cantidad tope de precio minorista
     {
         precioFinalVenta-=precioFinalVenta*descuentoMinorista;
         printf("\nEl precio Final de venta es de: $%.2f con el %.2f%% de descuento",precioFinalVenta,descuentoMinorista*100);
     }
-
-
+}
+///Problemas Condicionales Selectivos Compuestos
+void ejercicio_1_condicionalSelectivoCompuesto()
+{
+    //1. Leer 2 números; si son iguales que los multiplique, si el primero es mayor que el segundo que los reste y si no que los sume
+    int numero1,numero2,resultado=0;
+    printf("Ingrese dos numeros para luego hacer el calculo: \n");
+    printf("Numero1: ");
+    scanf("%i",&numero1);
+    printf("Numero 2: ");
+    scanf("%i",&numero2);
+    if(numero1==numero2)
+    {
+        resultado=numero1*numero2;
+        printf("Los numeros son iguales, el resultado de la multiplicacion");
+    }
+    if(numero1>numero2)
+    {
+        resultado=numero1-numero2;
+        printf("El primer numero es mayor que el segundo, el resultado de la resta");
+    }
+    if(numero1<numero2)
+    {
+        resultado=numero1+numero2;
+        printf("El primer numero es menor que el segundo, el resultado de la suma");
+    }
+    printf(" es de: %i",resultado);
 }
