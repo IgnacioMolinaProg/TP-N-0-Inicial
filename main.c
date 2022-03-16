@@ -13,6 +13,8 @@ void ejercicio_5_condicionalSelectivoSimple();
 ///Problemas Condicionales Selectivos Compuestos
 void ejercicio_1_condicionalSelectivoCompuesto();
 void ejercicio_2_condicionalSelectivoCompuesto();
+///Problemas con repeticiones
+void ejercicio_1_conRepeticion();
 int main()
 {
     ///PROBLEMAS SECUENCIALES
@@ -27,7 +29,9 @@ int main()
     //ejercicio_5_condicionalSelectivoSimple();
     ///Problemas Condicionales Selectivos Compuestos
     //ejercicio_1_condicionalSelectivoCompuesto();
-    ejercicio_2_condicionalSelectivoCompuesto();
+    //ejercicio_2_condicionalSelectivoCompuesto();
+    ///Problemas con repeticiones
+    ejercicio_1_conRepeticion();
 
     return 0;
 }
@@ -199,7 +203,7 @@ void ejercicio_2_condicionalSelectivoCompuesto()
     printf("\nNumero 1: ");
     scanf("%i",&numero1);
     numeroMayor=numero1;
-    do
+    do//se repite hasta que ingrese un numero distinto a primero ingresado
     {
         printf("Numero 2: ");
         scanf("%i",&numero2);
@@ -208,7 +212,7 @@ void ejercicio_2_condicionalSelectivoCompuesto()
     }while(numero2==numero1);
     if(numero2>numeroMayor)
         numeroMayor=numero2;
-    do
+    do//se repite hasta que ingreses un numero dintinto al primero y al segundo
     {
         printf("Numero 3: ");
         scanf("%i",&numero3);
@@ -218,5 +222,21 @@ void ejercicio_2_condicionalSelectivoCompuesto()
     if(numero3>numeroMayor)
         numeroMayor=numero3;
     printf("\nEl numero mayor es el: %i",numeroMayor);
-
+}
+///Problemas con repeticiones
+void ejercicio_1_conRepeticion()
+{
+    //1. Calcular el promedio de un alumno que tiene 7 calificaciones en la materia de Programación 1
+    int i=0,cantidadNotas=7,sumaDeNotas=0;
+    int notas[cantidadNotas];
+    float promedio=0;
+    printf("Ingrese las 7 notas  de Programacio para calcular el promedio: \n");
+    for(i=0;i<cantidadNotas;i++)//cargo un arreglo con las notas y al mismo tiempo las voy sumando para sacar el promedio
+    {
+        printf("Nota %i: ",i+1);
+        scanf("%i",&notas[i]);
+        sumaDeNotas+=notas[i];
+    }
+    promedio=(float)sumaDeNotas/(float)cantidadNotas;
+    printf("El promedio de las %i notas es de: %.2f",cantidadNotas,promedio);
 }
