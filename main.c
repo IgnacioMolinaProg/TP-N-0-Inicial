@@ -8,6 +8,7 @@ void ejercicio_3_secuencial();
 void ejercicio_1_condicionalSelectivoSimple();
 void ejercicio_2_condicionalSelectivoSimple();
 void ejercicio_3_condicionalSelectivoSimple();
+void ejercicio_4_condicionalSelectivoSimple();
 int main()
 {
     ///PROBLEMAS SECUENCIALES
@@ -17,7 +18,8 @@ int main()
     ///PROBLEMAS SECUENCIALES
     //ejercicio_1_condicionalSelectivoSimple();
     //ejercicio_2_condicionalSelectivoSimple();
-    ejercicio_3_condicionalSelectivoSimple();
+    //ejercicio_3_condicionalSelectivoSimple();
+    ejercicio_4_condicionalSelectivoSimple();
 
     return 0;
 }
@@ -111,5 +113,27 @@ void ejercicio_3_condicionalSelectivoSimple()
         salarioFinal=(horasLimite*salarioMinimo)+(horasExtrasTrabajadas*salarioExtra);
     }
     printf("Su salario sera de $%.2f",salarioFinal);
+}
+void ejercicio_4_condicionalSelectivoSimple()
+{
+    //4. Desarrolle un algoritmo que lea dos números y los imprima en forma ascendente
+    int numero1,numero2,numeroMenor,numeroMayor;
 
+    printf("Ingrese dos numeros y los ordenare de menor a mayor:\n");
+    printf("ingrese el primer numero: ");
+    scanf("%i",&numero1);
+    printf("Ingrese el segundo numero: ");
+    scanf("%i",&numero2);
+
+    if(numero1<numero2)
+    {
+        numeroMenor=numero1;
+        numeroMayor=numero2;
+    }
+    else
+    {
+        numeroMenor=numero2;
+        numeroMayor=numero1;
+    }
+    printf("\nLos numero en orden son: %i, %i",numeroMenor,numeroMayor);
 }
