@@ -9,6 +9,7 @@ void ejercicio_1_condicionalSelectivoSimple();
 void ejercicio_2_condicionalSelectivoSimple();
 void ejercicio_3_condicionalSelectivoSimple();
 void ejercicio_4_condicionalSelectivoSimple();
+void ejercicio_5_condicionalSelectivoSimple();
 int main()
 {
     ///PROBLEMAS SECUENCIALES
@@ -19,7 +20,8 @@ int main()
     //ejercicio_1_condicionalSelectivoSimple();
     //ejercicio_2_condicionalSelectivoSimple();
     //ejercicio_3_condicionalSelectivoSimple();
-    ejercicio_4_condicionalSelectivoSimple();
+    //ejercicio_4_condicionalSelectivoSimple();
+    ejercicio_5_condicionalSelectivoSimple();
 
     return 0;
 }
@@ -136,4 +138,28 @@ void ejercicio_4_condicionalSelectivoSimple()
         numeroMayor=numero1;
     }
     printf("\nLos numero en orden son: %i, %i",numeroMenor,numeroMayor);
+}
+void ejercicio_5_condicionalSelectivoSimple()
+{
+    //5. Hacer un algoritmo que calcule el total a pagar por la compra de camisas. Si se compran tres camisas o más se aplica un descuento del 20% sobre el total de la compra
+    //y si son menos de tres camisas un descuento del 10%
+    float descuentoMinorista=0.1,descuentoMayorista=0.2,precioCamisa,precioFinalVenta=0;
+    int cantidadCamisasCompradas,minimoDeCamisasXmayorista=3;
+    printf("Ingrese cantidad de camisas compradas: ");
+    scanf("%i",&cantidadCamisasCompradas);
+    printf("Ingrese el precio unitario de las camisas: $");
+    scanf("%f",&precioCamisa);
+    precioFinalVenta=cantidadCamisasCompradas*precioCamisa;
+    if(cantidadCamisasCompradas>=minimoDeCamisasXmayorista)
+    {
+        precioFinalVenta-=precioFinalVenta*descuentoMayorista;
+        printf("\nEl precio Final de venta es de: $%.2f con el %.2f%% de descuento",precioFinalVenta,descuentoMayorista*100);
+    }
+    else
+    {
+        precioFinalVenta-=precioFinalVenta*descuentoMinorista;
+        printf("\nEl precio Final de venta es de: $%.2f con el %.2f%% de descuento",precioFinalVenta,descuentoMinorista*100);
+    }
+
+
 }
