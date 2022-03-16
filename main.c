@@ -12,6 +12,7 @@ void ejercicio_4_condicionalSelectivoSimple();
 void ejercicio_5_condicionalSelectivoSimple();
 ///Problemas Condicionales Selectivos Compuestos
 void ejercicio_1_condicionalSelectivoCompuesto();
+void ejercicio_2_condicionalSelectivoCompuesto();
 int main()
 {
     ///PROBLEMAS SECUENCIALES
@@ -25,7 +26,8 @@ int main()
     //ejercicio_4_condicionalSelectivoSimple();
     //ejercicio_5_condicionalSelectivoSimple();
     ///Problemas Condicionales Selectivos Compuestos
-    ejercicio_1_condicionalSelectivoCompuesto();
+    //ejercicio_1_condicionalSelectivoCompuesto();
+    ejercicio_2_condicionalSelectivoCompuesto();
 
     return 0;
 }
@@ -188,4 +190,33 @@ void ejercicio_1_condicionalSelectivoCompuesto()
         printf("El primer numero es menor que el segundo, el resultado de la suma");
     }
     printf(" es de: %i",resultado);
+}
+void ejercicio_2_condicionalSelectivoCompuesto()
+{
+    //2. Leer tres números diferentes e imprimir el número mayor de los tres.
+    int numero1=0,numero2=0,numero3=0,numeroMayor=0;
+    printf("Ingrese tres numero diferes para saber cual es el mayor: ");
+    printf("\nNumero 1: ");
+    scanf("%i",&numero1);
+    numeroMayor=numero1;
+    do
+    {
+        printf("Numero 2: ");
+        scanf("%i",&numero2);
+        if(numero2==numero1)
+            printf("ERROR: El numero que intenta ingresar ya a sido registrado antes, por favor ingrese un numero distinto.\n");
+    }while(numero2==numero1);
+    if(numero2>numeroMayor)
+        numeroMayor=numero2;
+    do
+    {
+        printf("Numero 3: ");
+        scanf("%i",&numero3);
+        if(numero3==numero1||numero3==numero2)
+            printf("ERROR: El numero que intenta ingresar ya a sido registrado antes, por favor ingrese un numero distinto.\n");
+    }while(numero3==numero1||numero3==numero2);
+    if(numero3>numeroMayor)
+        numeroMayor=numero3;
+    printf("\nEl numero mayor es el: %i",numeroMayor);
+
 }
