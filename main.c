@@ -15,6 +15,7 @@ void ejercicio_1_condicionalSelectivoCompuesto();
 void ejercicio_2_condicionalSelectivoCompuesto();
 ///Problemas con repeticiones
 void ejercicio_1_conRepeticion();
+void ejercicio_2_conRepeticion();
 int main()
 {
     ///PROBLEMAS SECUENCIALES
@@ -31,7 +32,8 @@ int main()
     //ejercicio_1_condicionalSelectivoCompuesto();
     //ejercicio_2_condicionalSelectivoCompuesto();
     ///Problemas con repeticiones
-    ejercicio_1_conRepeticion();
+    //ejercicio_1_conRepeticion();
+    ejercicio_2_conRepeticion();
 
     return 0;
 }
@@ -239,4 +241,26 @@ void ejercicio_1_conRepeticion()
     }
     promedio=(float)sumaDeNotas/(float)cantidadNotas;
     printf("El promedio de las %i notas es de: %.2f",cantidadNotas,promedio);
+}
+void ejercicio_2_conRepeticion()
+{
+    //2. Leer 10 números y obtener su cubo y su cuarta.
+    int cantidadNumeros=10,i;
+    int numeros[cantidadNumeros];
+    int numerosAlCubo[cantidadNumeros];
+    int numerosALaCuarta[cantidadNumeros];
+    printf("Ingrese 10 numeros para calcular su cubu y cuarta: \n");
+    for(i=0;i<cantidadNumeros;i++)//mientras voy cargando los numero voy calculando el cubo y la cuarta
+    {
+        printf("Nota %i: ",i+1);
+        scanf("%i",&numeros[i]);
+        numerosAlCubo[i]=numeros[i]*numeros[i]*numeros[i];
+        numerosALaCuarta[i]=numerosAlCubo[i]*numeros[i];
+    }
+    printf("Numeros ingresados: ");
+    for(i=0;i<cantidadNumeros;i++)
+    {
+        printf("\n%i al cubo es: %i ",numeros[i],numerosAlCubo[i]);
+        printf("y a la cuarta es: %i",numerosALaCuarta[i]);
+    }
 }
