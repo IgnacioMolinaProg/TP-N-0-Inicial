@@ -99,5 +99,17 @@ void ejercicio_3_condicionalSelectivoSimple()
 {
     /*3. Un obrero necesita calcular su salario semanal, el cual se obtiene de la sig. manera:
     Si trabaja 40 horas o menos se le paga $300 por hora Si trabaja más de 40 horas se le paga $300 por cada una de las primeras 40 horas y $400 por cada hora extra.*/
+    float salarioFinal=0,salarioMinimo=300,salarioExtra=400;
+    int horasTrabajadas=0,horasLimite=40,horasExtrasTrabajadas=0;
+    printf("Ingrese cantidad de horas trabajadas: ");
+    scanf("%i",&horasTrabajadas);
+    if(horasTrabajadas<=horasLimite)
+        salarioFinal=horasTrabajadas*salarioMinimo;
+    else
+    {
+        horasExtrasTrabajadas=horasTrabajadas-horasLimite;
+        salarioFinal=(horasLimite*salarioMinimo)+(horasExtrasTrabajadas*salarioExtra);
+    }
+    printf("Su salario sera de $%.2f",salarioFinal);
 
 }
