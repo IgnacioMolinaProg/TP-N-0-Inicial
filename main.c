@@ -16,6 +16,7 @@ void ejercicio_2_condicionalSelectivoCompuesto();
 ///Problemas con repeticiones
 void ejercicio_1_conRepeticion();
 void ejercicio_2_conRepeticion();
+void ejercicio_3_conRepeticion();
 int main()
 {
     ///PROBLEMAS SECUENCIALES
@@ -33,7 +34,8 @@ int main()
     //ejercicio_2_condicionalSelectivoCompuesto();
     ///Problemas con repeticiones
     //ejercicio_1_conRepeticion();
-    ejercicio_2_conRepeticion();
+    //ejercicio_2_conRepeticion();
+    ejercicio_3_conRepeticion();
 
     return 0;
 }
@@ -257,10 +259,29 @@ void ejercicio_2_conRepeticion()
         numerosAlCubo[i]=numeros[i]*numeros[i]*numeros[i];
         numerosALaCuarta[i]=numerosAlCubo[i]*numeros[i];
     }
-    printf("Numeros ingresados: ");
+    printf("\nNumeros ingresados: ");
     for(i=0;i<cantidadNumeros;i++)
     {
         printf("\n%i al cubo es: %i ",numeros[i],numerosAlCubo[i]);
         printf("y a la cuarta es: %i",numerosALaCuarta[i]);
     }
+}
+void ejercicio_3_conRepeticion()
+{
+    //3. Leer 10 números e imprimir solamente los números positivos
+    int cantidadNumeros=10,i=0;
+    int numeros[cantidadNumeros];
+    printf("Ingrese un total de %i numeros:\n",cantidadNumeros);
+    for(i=0;i<cantidadNumeros;i++)
+    {
+        printf("Numero %i: ",i+1);
+        scanf("%i",&numeros[i]);
+    }
+    printf("\nLos numeros positivos son: ");
+    for(i=0;i<cantidadNumeros;i++)
+    {
+        if(numeros[i]>=0)
+            printf("%i,",numeros[i]);
+    }
+
 }
