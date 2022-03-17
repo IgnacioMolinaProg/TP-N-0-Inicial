@@ -17,6 +17,7 @@ void ejercicio_2_condicionalSelectivoCompuesto();
 void ejercicio_1_conRepeticion();
 void ejercicio_2_conRepeticion();
 void ejercicio_3_conRepeticion();
+void ejercicio_4_conRepeticion();
 int main()
 {
     ///PROBLEMAS SECUENCIALES
@@ -35,7 +36,9 @@ int main()
     ///Problemas con repeticiones
     //ejercicio_1_conRepeticion();
     //ejercicio_2_conRepeticion();
-    ejercicio_3_conRepeticion();
+    //ejercicio_3_conRepeticion();
+    ejercicio_4_conRepeticion();
+
 
     return 0;
 }
@@ -278,10 +281,34 @@ void ejercicio_3_conRepeticion()
         scanf("%i",&numeros[i]);
     }
     printf("\nLos numeros positivos son: ");
-    for(i=0;i<cantidadNumeros;i++)
+    for(i=0;i<cantidadNumeros;i++)//si los numero ingresados son positivos los muestro por pantalla
     {
         if(numeros[i]>=0)
             printf("%i,",numeros[i]);
     }
-
 }
+void ejercicio_4_conRepeticion()
+{
+    //4. Leer 15 números negativos y convertirlos en positivos e imprimir dichos números.
+    int cantidadNumeros=5,i=0;
+    int numerosNegativos[cantidadNumeros];
+    int numerosPositivos[cantidadNumeros];
+    printf("Ingrese %i numeros negativos:\n",cantidadNumeros);
+    for(i=0;i<cantidadNumeros;i++)
+    {
+        do
+        {
+            printf("Numero %i: ",i+1);
+            scanf("%i",&numerosNegativos[i]);
+            if(numerosNegativos[i]>0)
+                printf("ERROR: el numero ingresado no es negativo, por favor ingrese un numero valido.\n");
+        }while(numerosNegativos[i]>0);
+        numerosPositivos[i]=numerosNegativos[i]-numerosNegativos[i]-numerosNegativos[i];
+    }
+    printf("Los numeros pasados a positivos son: ");
+    for(i=0;i<cantidadNumeros;i++)
+    {
+        printf("%i,",numerosPositivos[i]);
+    }
+}
+
