@@ -19,6 +19,7 @@ void ejercicio_2_conRepeticion();
 void ejercicio_3_conRepeticion();
 void ejercicio_4_conRepeticion();
 void ejercicio_5_conRepeticion();
+void ejercicio_6_conRepeticion();
 int main()
 {
     ///PROBLEMAS SECUENCIALES
@@ -39,7 +40,8 @@ int main()
     //ejercicio_2_conRepeticion();
     //ejercicio_3_conRepeticion();
     //ejercicio_4_conRepeticion();
-    ejercicio_5_conRepeticion();
+    //ejercicio_5_conRepeticion();
+    ejercicio_6_conRepeticion();
 
     return 0;
 }
@@ -336,5 +338,15 @@ void ejercicio_5_conRepeticion()
     promedio=sumaNotas/(float)cantidadAlumnos;
     printf("\nEl promedio de las %i notas es de: %.2f",cantidadAlumnos,promedio);
     printf("\nLa nota menor de los alumnos es de: %.2f",notaMenor);
-
+}
+void ejercicio_6_conRepeticion()
+{
+    //6. Calcular e imprimir la tabla de multiplicar de un número cualquiera. Imprimir el multiplicando, el multiplicador y el producto
+    int numero,i,maximoTabla=10;
+    printf("Ingrese el numero de que tabla desea saber: ");
+    scanf("%i",&numero);
+    for(i=1;i<maximoTabla+1;i++)
+    {
+        printf("\n%i x %i = %i",numero,i,numero*i);
+    }
 }
