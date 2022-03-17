@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-///PROBLEMAS SECUENCIALES
+///Problemas secuenciales
 void ejercicio_1_secuencial();
 void ejercicio_2_secuencial();
 void ejercicio_3_secuencial();
@@ -22,47 +22,232 @@ void ejercicio_5_conRepeticion();
 void ejercicio_6_conRepeticion();
 int main()
 {
-    ///PROBLEMAS SECUENCIALES
-    //ejercicio_1_secuencial();
-    //ejercicio_2_secuencial();
-    //ejercicio_3_secuencial();
-    ///PROBLEMAS SECUENCIALES
-    //ejercicio_1_condicionalSelectivoSimple();
-    //ejercicio_2_condicionalSelectivoSimple();
-    //ejercicio_3_condicionalSelectivoSimple();
-    //ejercicio_4_condicionalSelectivoSimple();
-    //ejercicio_5_condicionalSelectivoSimple();
-    ///Problemas Condicionales Selectivos Compuestos
-    //ejercicio_1_condicionalSelectivoCompuesto();
-    //ejercicio_2_condicionalSelectivoCompuesto();
-    ///Problemas con repeticiones
-    //ejercicio_1_conRepeticion();
-    //ejercicio_2_conRepeticion();
-    //ejercicio_3_conRepeticion();
-    //ejercicio_4_conRepeticion();
-    //ejercicio_5_conRepeticion();
-    ejercicio_6_conRepeticion();
+    int problema,ejercicio;
+    do
+    {
+        system("cls");
+        printf("\t\t\t\t\tTrabajo Practico N%c0: Inicial",167);
+        printf("\n\n1.Problemas Secuenciales.");
+        printf("\n2.Problemas Condicionales Selectivos Simples.");
+        printf("\n3.Problemas Condicionales Selectivos Compuestos.");
+        printf("\n4.Problemas con repeticiones.");
+        printf("\n0. Salir.");
+        printf("\n\nElija el tipo de ejercicio que desa resolver: [ ]\b\b");
+        scanf("%i",&problema);
+        switch(problema)
+        {
+        case 1:///Problemas secuenciales
+            do
+            {
+                system("cls");
+                printf("\t\t\t\t\tTrabajo Practico N%c0: Inicial",167);
+                printf("\n\nProblemas Secuenciales:");
+                printf("\n1. Invertir su capital en un banco.");
+                printf("\n2. Descuento en una tienda.");
+                printf("\n3. Porcentaje de hombres y mujeres.");
+                printf("\n0. Atras.");
+                printf("\n\nQue ejercio desea resolver? [ ]\b\b");
+                scanf("%i",&ejercicio);
+                switch(ejercicio)
+                {
+                case 1:
+                    system("cls");
+                    printf("\t\t\t\t\tTrabajo Practico N%c0: Inicial\n\n",167);
+                    ejercicio_1_secuencial();
+                    printf("\n\n");
+                    system("pause");
+                    break;
+                case 2:
+                    system("cls");
+                    printf("\t\t\t\t\tTrabajo Practico N%c0: Inicial\n\n",167);
+                    ejercicio_2_secuencial();
+                    printf("\n\n");
+                    system("pause");
+                    break;
+                case 3:
+                    system("cls");
+                    printf("\t\t\t\t\tTrabajo Practico N%c0: Inicial\n\n",167);
+                    ejercicio_3_secuencial();
+                    printf("\n\n");
+                    system("pause");
+                    break;
+                }
+            }while(ejercicio!=0);
+
+            break;
+
+        case 2:///Problemas Condicionales Selectivos Simples
+            do
+            {
+                system("cls");
+                printf("\t\t\t\t\tTrabajo Practico N%c0: Inicial",167);
+                printf("\n\nProblemas Condicionales Selectivos Simples:");
+                printf("\n1. Determinar si un alumno aprueba a reprueba un curso.");
+                printf("\n2. Si tendre descuento en la compra de un almacen.");
+                printf("\n3. Calcular el salario semanal de un obrero.");
+                printf("\n4. Ordenar dos numeros de forma acendente.");
+                printf("\n5. Calcular descuento en una tienda de camisas.");
+                printf("\n0. Atras.");
+                printf("\n\nQue ejercio desea resolver? [ ]\b\b");
+                scanf("%i",&ejercicio);
+                switch(ejercicio)
+                {
+                case 1:
+                    system("cls");
+                    printf("\t\t\t\t\tTrabajo Practico N%c0: Inicial\n\n",167);
+                    ejercicio_1_condicionalSelectivoSimple();
+                    printf("\n\n");
+                    system("pause");
+                    break;
+                case 2:
+                    system("cls");
+                    printf("\t\t\t\t\tTrabajo Practico N%c0: Inicial\n\n",167);
+                    ejercicio_2_condicionalSelectivoSimple();
+                    printf("\n\n");
+                    system("pause");
+                    break;
+                case 3:
+                    system("cls");
+                    printf("\t\t\t\t\tTrabajo Practico N%c0: Inicial\n\n",167);
+                    ejercicio_3_condicionalSelectivoSimple();
+                    printf("\n\n");
+                    system("pause");
+                    break;
+                case 4:
+                    system("cls");
+                    printf("\t\t\t\t\tTrabajo Practico N%c0: Inicial\n\n",167);
+                    ejercicio_4_condicionalSelectivoSimple();
+                    printf("\n\n");
+                    system("pause");
+                    break;
+                case 5:
+                    system("cls");
+                    printf("\t\t\t\t\tTrabajo Practico N%c0: Inicial\n\n",167);
+                    ejercicio_5_condicionalSelectivoSimple();
+                    printf("\n\n");
+                    system("pause");
+                    break;
+                }
+            }while(ejercicio!=0);
+
+            break;
+        case 3:///Problemas Condicionales Selectivos Compuestos
+            do
+            {
+                system("cls");
+                printf("\t\t\t\t\tTrabajo Practico N%c0: Inicial",167);
+                printf("\n\nProblemas Condicionales Selectivos Compuestos:");
+                printf("\n1. Leer dos numeros y realizar una ecuacion.");
+                printf("\n2. Leer 3 numeros diferentes y mostrar el mayor.");
+                printf("\n0. Atras.");
+                printf("\n\nQue ejercio desea resolver? [ ]\b\b");
+                scanf("%i",&ejercicio);
+                switch(ejercicio)
+                {
+                case 1:
+                    system("cls");
+                    printf("\t\t\t\t\tTrabajo Practico N%c0: Inicial\n\n",167);
+                    ejercicio_1_condicionalSelectivoCompuesto();
+                    printf("\n\n");
+                    system("pause");
+                    break;
+                case 2:
+                    system("cls");
+                    printf("\t\t\t\t\tTrabajo Practico N%c0: Inicial\n\n",167);
+                    ejercicio_2_condicionalSelectivoCompuesto();
+                    printf("\n\n");
+                    system("pause");
+                    break;
+                }
+            }while(ejercicio!=0);
+
+            break;
+        case 4:///Problemas con repeticiones
+            do
+            {
+                system("cls");
+                printf("\t\t\t\t\tTrabajo Practico N%c0: Inicial",167);
+                printf("\n\nProblemas con repeticion:");
+                printf("\n1. Calcular el promedio de 7 notas.");
+                printf("\n2. Leer 10 numeros y obtener su cubo y su cuarta.");
+                printf("\n3. Leer 10 numeros e imprimir solamente los numeros positivos.");
+                printf("\n4. Leer 15 numeros negativos y convertirlos en positivos.");
+                printf("\n5. Sacar pormedio de 40 notas y la nota mas chica.");
+                printf("\n6. Mostrar tabla de multiplicacion.");
+                printf("\n0. Atras.");
+                printf("\n\nQue ejercio desea resolver? [ ]\b\b");
+                scanf("%i",&ejercicio);
+                switch(ejercicio)
+                {
+                case 1:
+                    system("cls");
+                    printf("\t\t\t\t\tTrabajo Practico N%c0: Inicial\n\n",167);
+                    ejercicio_1_conRepeticion();
+                    printf("\n\n");
+                    system("pause");
+                    break;
+                case 2:
+                    system("cls");
+                    printf("\t\t\t\t\tTrabajo Practico N%c0: Inicial\n\n",167);
+                    ejercicio_2_conRepeticion();
+                    printf("\n\n");
+                    system("pause");
+                    break;
+                case 3:
+                    system("cls");
+                    printf("\t\t\t\t\tTrabajo Practico N%c0: Inicial\n\n",167);
+                    ejercicio_3_conRepeticion();
+                    printf("\n\n");
+                    system("pause");
+                    break;
+                case 4:
+                    system("cls");
+                    printf("\t\t\t\t\tTrabajo Practico N%c0: Inicial\n\n",167);
+                    ejercicio_4_conRepeticion();
+                    printf("\n\n");
+                    system("pause");
+                    break;
+                case 5:
+                    system("cls");
+                    printf("\t\t\t\t\tTrabajo Practico N%c0: Inicial\n\n",167);
+                    ejercicio_5_conRepeticion();
+                    printf("\n\n");
+                    system("pause");
+                    break;
+                case 6:
+                    system("cls");
+                    printf("\t\t\t\t\tTrabajo Practico N%c0: Inicial\n\n",167);
+                    ejercicio_6_conRepeticion();
+                    printf("\n\n");
+                    system("pause");
+                    break;
+                }
+            }while(ejercicio!=0);
+            break;
+        }
+    }while(problema!=0);
+
 
     return 0;
 }
-///PROBLEMAS SECUENCIALES
+///Problemas Secuenciales
 void ejercicio_1_secuencial()
 {
     //1. Suponga que un individuo desea invertir su capital en un banco y desea saber cuánto dinero ganará después de un mes si el banco paga a razón de 2% mensual.
     float dinero,ganancia;
-   printf("Ingrese el monto de su cuenta bancaria: ");
-   scanf("%f",&dinero);
-   ganancia=dinero+(dinero*0.02);//le sumo el 20% de ganancia
-   printf("\nDespues de un mes su monto sera de: %.2f",ganancia);
+    printf("Ingrese el monto de su cuenta bancaria: $");
+    scanf("%f",&dinero);
+    ganancia=dinero+(dinero*0.02);//le sumo el 20% de ganancia
+    printf("\nDespues de un mes su monto sera de: $%.2f",ganancia);
 }
 void ejercicio_2_secuencial()
 {
     //2. Una tienda ofrece un descuento del 15% sobre el total de la compra y un cliente desea saber cuánto deberá pagar finalmente por su compra.
     float dinero,precioFinal;
-    printf("Ingrese el monto a pagar: ");
+    printf("Ingrese el monto a pagar: $");
     scanf("%f",&dinero);
     precioFinal=dinero-(dinero*0.15);//le resto el descuento del 15%
-    printf("\nLa compra con el 15%% de descuenta sera de: %.2f",precioFinal);
+    printf("\nLa compra con el 15%% de descuenta sera de: $%.2f",precioFinal);
 
 }
 void ejercicio_3_secuencial()
@@ -77,17 +262,17 @@ void ejercicio_3_secuencial()
     totalPersonas=mujeres+hombres;
     porcentajeHombre=(((float)hombres/(float)totalPersonas)*100);//saco la cantidad de porcentaje de hombre sobre el total
     porcentajeMujeres=(((float)mujeres/(float)totalPersonas)*100);//saco la cantidad de porcentaje de mujeres sobre el total
-    printf("El porcentaje de Hombres es de: %.2f%%",porcentajeHombre);
-    printf("\nEl porcentaje de Mujeres es de: %.2f%%",porcentajeMujeres);
+    printf("\nEl porcentaje de Hombres es del: %.2f%%",porcentajeHombre);
+    printf("\nEl porcentaje de Mujeres es del: %.2f%%",porcentajeMujeres);
 }
-///PROBLEMAS SECUENCIALES
+///Problemas Condicionales Selectivos Simples
 void ejercicio_1_condicionalSelectivoSimple()
 {
     //1. Determinar si un alumno aprueba a reprueba un curso, sabiendo que aprobara si su promedio de tres calificaciones es mayor o igual a 7; reprueba en caso contrario.
     float nota1,nota2,nota3,promedio;
     int cantidadNotas=3;
 
-    printf("Ingrese sus notas:\n");
+    printf("Ingrese sus 3 notas:\n");
     printf("Nota 1: ");
     scanf("%f",&nota1);
     printf("Nota 2: ");
@@ -113,8 +298,13 @@ void ejercicio_2_condicionalSelectivoSimple()
 
     montoConDescuento=montoDeCompra;
     if(montoDeCompra>limiteDescuento)//si el monto de la compra es mayor a la cantidad minima para el descuento
+    {
         montoConDescuento-=montoConDescuento*descuento;//se aplica el descuento
-    printf("El monto a pagar sera de:$%.2f con un descuento del %.2f%%",montoConDescuento,descuento*100);
+        printf("El monto a pagar sera de:$%.2f con un descuento del %.2f%%",montoConDescuento,descuento*100);
+    }
+    else
+        printf("El monto a pagar sera de:$%.2f",montoConDescuento);
+
 }
 void ejercicio_3_condicionalSelectivoSimple()
 {
@@ -137,13 +327,11 @@ void ejercicio_4_condicionalSelectivoSimple()
 {
     //4. Desarrolle un algoritmo que lea dos números y los imprima en forma ascendente
     int numero1,numero2,numeroMenor,numeroMayor;
-
     printf("Ingrese dos numeros y los ordenare de menor a mayor:\n");
     printf("ingrese el primer numero: ");
     scanf("%i",&numero1);
     printf("Ingrese el segundo numero: ");
     scanf("%i",&numero2);
-
     if(numero1<numero2)
     {
         numeroMenor=numero1;
@@ -184,7 +372,7 @@ void ejercicio_1_condicionalSelectivoCompuesto()
     //1. Leer 2 números; si son iguales que los multiplique, si el primero es mayor que el segundo que los reste y si no que los sume
     int numero1,numero2,resultado=0;
     printf("Ingrese dos numeros para luego hacer el calculo: \n");
-    printf("Numero1: ");
+    printf("Numero 1: ");
     scanf("%i",&numero1);
     printf("Numero 2: ");
     scanf("%i",&numero2);
@@ -209,7 +397,7 @@ void ejercicio_2_condicionalSelectivoCompuesto()
 {
     //2. Leer tres números diferentes e imprimir el número mayor de los tres.
     int numero1=0,numero2=0,numero3=0,numeroMayor=0;
-    printf("Ingrese tres numero diferes para saber cual es el mayor: ");
+    printf("Ingrese tres numeros diferes para saber cual es el mayor: ");
     printf("\nNumero 1: ");
     scanf("%i",&numero1);
     numeroMayor=numero1;
@@ -219,7 +407,8 @@ void ejercicio_2_condicionalSelectivoCompuesto()
         scanf("%i",&numero2);
         if(numero2==numero1)
             printf("ERROR: El numero que intenta ingresar ya a sido registrado antes, por favor ingrese un numero distinto.\n");
-    }while(numero2==numero1);
+    }
+    while(numero2==numero1);
     if(numero2>numeroMayor)
         numeroMayor=numero2;
     do//se repite hasta que ingreses un numero dintinto al primero y al segundo
@@ -228,7 +417,8 @@ void ejercicio_2_condicionalSelectivoCompuesto()
         scanf("%i",&numero3);
         if(numero3==numero1||numero3==numero2)
             printf("ERROR: El numero que intenta ingresar ya a sido registrado antes, por favor ingrese un numero distinto.\n");
-    }while(numero3==numero1||numero3==numero2);
+    }
+    while(numero3==numero1||numero3==numero2);
     if(numero3>numeroMayor)
         numeroMayor=numero3;
     printf("\nEl numero mayor es el: %i",numeroMayor);
@@ -240,8 +430,8 @@ void ejercicio_1_conRepeticion()
     int i=0,cantidadNotas=7,sumaDeNotas=0;
     int notas[cantidadNotas];
     float promedio=0;
-    printf("Ingrese las 7 notas  de Programacio para calcular el promedio: \n");
-    for(i=0;i<cantidadNotas;i++)//cargo un arreglo con las notas y al mismo tiempo las voy sumando para sacar el promedio
+    printf("Ingrese las 7 notas de Programacion para calcular el promedio: \n");
+    for(i=0; i<cantidadNotas; i++) //cargo un arreglo con las notas y al mismo tiempo las voy sumando para sacar el promedio
     {
         printf("Nota %i: ",i+1);
         scanf("%i",&notas[i]);
@@ -258,7 +448,7 @@ void ejercicio_2_conRepeticion()
     int numerosAlCubo[cantidadNumeros];
     int numerosALaCuarta[cantidadNumeros];
     printf("Ingrese 10 numeros para calcular su cubu y cuarta: \n");
-    for(i=0;i<cantidadNumeros;i++)//mientras voy cargando los numero voy calculando el cubo y la cuarta
+    for(i=0; i<cantidadNumeros; i++) //mientras voy cargando los numeros voy calculando el cubo y la cuarta
     {
         printf("Nota %i: ",i+1);
         scanf("%i",&numeros[i]);
@@ -266,7 +456,7 @@ void ejercicio_2_conRepeticion()
         numerosALaCuarta[i]=numerosAlCubo[i]*numeros[i];
     }
     printf("\nNumeros ingresados: ");
-    for(i=0;i<cantidadNumeros;i++)
+    for(i=0; i<cantidadNumeros; i++)
     {
         printf("\n%i al cubo es: %i ",numeros[i],numerosAlCubo[i]);
         printf("y a la cuarta es: %i",numerosALaCuarta[i]);
@@ -277,14 +467,14 @@ void ejercicio_3_conRepeticion()
     //3. Leer 10 números e imprimir solamente los números positivos
     int cantidadNumeros=10,i=0;
     int numeros[cantidadNumeros];
-    printf("Ingrese un total de %i numeros:\n",cantidadNumeros);
-    for(i=0;i<cantidadNumeros;i++)
+    printf("Ingrese un total de %i numeros(positivos o negativos):\n",cantidadNumeros);
+    for(i=0; i<cantidadNumeros; i++)
     {
         printf("Numero %i: ",i+1);
         scanf("%i",&numeros[i]);
     }
     printf("\nLos numeros positivos son: ");
-    for(i=0;i<cantidadNumeros;i++)//si los numero ingresados son positivos los muestro por pantalla
+    for(i=0; i<cantidadNumeros; i++) //si los numero ingresados son positivos los muestro por pantalla
     {
         if(numeros[i]>=0)
             printf("%i,",numeros[i]);
@@ -297,7 +487,7 @@ void ejercicio_4_conRepeticion()
     int numerosNegativos[cantidadNumeros];
     int numerosPositivos[cantidadNumeros];
     printf("Ingrese %i numeros negativos:\n",cantidadNumeros);
-    for(i=0;i<cantidadNumeros;i++)
+    for(i=0; i<cantidadNumeros; i++)
     {
         do
         {
@@ -305,11 +495,12 @@ void ejercicio_4_conRepeticion()
             scanf("%i",&numerosNegativos[i]);
             if(numerosNegativos[i]>0)
                 printf("ERROR: el numero ingresado no es negativo, por favor ingrese un numero valido.\n");
-        }while(numerosNegativos[i]>0);
+        }
+        while(numerosNegativos[i]>0);
         numerosPositivos[i]=numerosNegativos[i]-numerosNegativos[i]-numerosNegativos[i];
     }
     printf("Los numeros pasados a positivos son: ");
-    for(i=0;i<cantidadNumeros;i++)
+    for(i=0; i<cantidadNumeros; i++)
     {
         printf("%i,",numerosPositivos[i]);
     }
@@ -322,7 +513,7 @@ void ejercicio_5_conRepeticion()
     float promedio,sumaNotas=0,notaMenor=0;
     float notas[cantidadAlumnos];
     printf("Ingrese las notas de los %i alumnos:\n",cantidadAlumnos);
-    for(i=0;i<cantidadAlumnos;i++)//cargo las notas de los alumnos y las voy sumando para sacar el promedio luego y encontrar el menor elemento
+    for(i=0; i<cantidadAlumnos; i++) //cargo las notas de los alumnos y las voy sumando para sacar el promedio luego y encontrar el menor elemento
     {
         printf("Alumno %i: ",i+1);
         scanf("%f",&notas[i]);
@@ -345,7 +536,7 @@ void ejercicio_6_conRepeticion()
     int numero,i,maximoTabla=10;
     printf("Ingrese el numero de que tabla desea saber: ");
     scanf("%i",&numero);
-    for(i=1;i<maximoTabla+1;i++)
+    for(i=1; i<maximoTabla+1; i++)
     {
         printf("\n%i x %i = %i",numero,i,numero*i);
     }
