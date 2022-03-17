@@ -18,6 +18,7 @@ void ejercicio_1_conRepeticion();
 void ejercicio_2_conRepeticion();
 void ejercicio_3_conRepeticion();
 void ejercicio_4_conRepeticion();
+void ejercicio_5_conRepeticion();
 int main()
 {
     ///PROBLEMAS SECUENCIALES
@@ -37,8 +38,8 @@ int main()
     //ejercicio_1_conRepeticion();
     //ejercicio_2_conRepeticion();
     //ejercicio_3_conRepeticion();
-    ejercicio_4_conRepeticion();
-
+    //ejercicio_4_conRepeticion();
+    ejercicio_5_conRepeticion();
 
     return 0;
 }
@@ -290,7 +291,7 @@ void ejercicio_3_conRepeticion()
 void ejercicio_4_conRepeticion()
 {
     //4. Leer 15 números negativos y convertirlos en positivos e imprimir dichos números.
-    int cantidadNumeros=5,i=0;
+    int cantidadNumeros=15,i=0;
     int numerosNegativos[cantidadNumeros];
     int numerosPositivos[cantidadNumeros];
     printf("Ingrese %i numeros negativos:\n",cantidadNumeros);
@@ -311,4 +312,29 @@ void ejercicio_4_conRepeticion()
         printf("%i,",numerosPositivos[i]);
     }
 }
+void ejercicio_5_conRepeticion()
+{
+    //5. Suponga que se tiene un conjunto de calificaciones de un grupo de 40 alumnos.
+    //Realizar un algoritmo para calcular la calificación promedio y la calificación más baja de todo el grupo.
+    int cantidadAlumnos=40,i;
+    float promedio,sumaNotas=0,notaMenor=0;
+    float notas[cantidadAlumnos];
+    printf("Ingrese las notas de los %i alumnos:\n",cantidadAlumnos);
+    for(i=0;i<cantidadAlumnos;i++)//cargo las notas de los alumnos y las voy sumando para sacar el promedio luego y encontrar el menor elemento
+    {
+        printf("Alumno %i: ",i+1);
+        scanf("%f",&notas[i]);
+        sumaNotas+=notas[i];
+        if(i==0)
+            notaMenor=notas[i];
+        else
+        {
+            if(notaMenor>notas[i])
+                notaMenor=notas[i];
+        }
+    }
+    promedio=sumaNotas/(float)cantidadAlumnos;
+    printf("\nEl promedio de las %i notas es de: %.2f",cantidadAlumnos,promedio);
+    printf("\nLa nota menor de los alumnos es de: %.2f",notaMenor);
 
+}
